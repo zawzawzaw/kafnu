@@ -35,7 +35,7 @@ manic.ui.FormCheck = function(options, element) {
 
   // if for some reason you are not able to add a class to the form
   if(this.element.prop("tagName").toLowerCase() != 'form'){
-    console.log('manic.ui.FormCheck: added to form inside');
+    // console.log('manic.ui.FormCheck: added to form inside');
     this.element = this.element.find('form');
   }
 
@@ -82,7 +82,7 @@ manic.ui.FormCheck = function(options, element) {
 
   // FORCED SUBMIT...
   this.element.find('.form-check-force-submit').click(function(event){
-    console.log('manic.ui.FormCheck: forced submit...');
+    // console.log('manic.ui.FormCheck: forced submit...');
     this.element.submit();
   }.bind(this));
 
@@ -90,7 +90,7 @@ manic.ui.FormCheck = function(options, element) {
   this.create_input_array();
 
 
-  console.log('init');
+  // console.log('init');
 };
 goog.inherits(manic.ui.FormCheck, goog.events.EventTarget);
 
@@ -344,7 +344,7 @@ manic.ui.FormCheck.prototype.add_input_error = function(input_item,input_name,me
   
 
 
-  console.log('has error: ' + input_name);
+  // console.log('has error: ' + input_name);
 
   /**
    * @type {jQuery}
@@ -399,7 +399,7 @@ manic.ui.FormCheck.prototype.sample_method_calls = function() {
 
 manic.ui.FormCheck.prototype.check_form = function() {
 
-  console.log('manic.ui.FormCheck: check_form');
+  // console.log('manic.ui.FormCheck: check_form');
 
   /**
    * @type {jQuery}
@@ -456,8 +456,8 @@ manic.ui.FormCheck.prototype.check_form = function() {
       // check required
       if(input_item.hasClass("required")){
 
-        console.log('manic.ui.FormCheck: has required');
-        console.log(input_item);
+        // console.log('manic.ui.FormCheck: has required');
+        // console.log(input_item);
 
         if( 
           (input_item.attr("type") == "checkbox" && input_item.is(':checked') == false) || 
@@ -466,7 +466,7 @@ manic.ui.FormCheck.prototype.check_form = function() {
           (input_item.attr("type") != "checkbox" && has_placeholder == true && input_item.val() == placeholder_str) 
         ){
 
-          console.log('has error');
+          // console.log('has error');
           this.error_id_array[this.error_id_array.length] = input_id;
           this.add_input_error(input_item, input_name, manic.ui.FormCheck.STRING_REQUIRED );    ///////////////
 
@@ -513,21 +513,21 @@ manic.ui.FormCheck.prototype.check_form = function() {
 
       // must be redaundant
       if(input_item.hasClass('required-group')){
-        console.log('input has required-group')
+        // console.log('input has required-group')
         if( 
           (input_item.attr("type") == "radio" && input_item.is(':checked') == true) || 
           (input_item.attr("type") != "radio" && input_item.val() != "")  ){
 
-          console.log('one of the required is checked');
+          // console.log('one of the required is checked');
           required_group_value = input_item.val();
         }
       }
 
       if(input_item.hasClass('required-group-last')){
-        console.log('required_group_value: ' + required_group_value);
+        // console.log('required_group_value: ' + required_group_value);
 
         if(required_group_value == ""){
-          console.log('add alert');
+          // console.log('add alert');
 
           // console.log('required_group_value: ' + required_group_value);
           this.error_id_array[this.error_id_array.length] = input_id;
@@ -595,9 +595,9 @@ manic.ui.FormCheck.prototype.send_ajax = function() {
     url: this.action_url,
     complete: function(event){
 
-      console.log('on_send_ajax_complete');
-      console.log(event);
-      console.log(event.responseText);
+      // console.log('on_send_ajax_complete');
+      // console.log(event);
+      // console.log(event.responseText);
 
       this.element.removeClass('form-error-version');
       this.element.removeClass('sending-version');
@@ -643,7 +643,7 @@ manic.ui.FormCheck.prototype.on_form_submit = function(event) {
  */
 manic.ui.FormCheck.prototype.on_input_item_placeholder_focus = function(event) {
 
-  console.log('manic.ui.FormCheck: on focus?');
+  // console.log('manic.ui.FormCheck: on focus?');
 
   var current_target = $(event.currentTarget);
   var placeholder = current_target.data('placeholder');
@@ -668,7 +668,7 @@ manic.ui.FormCheck.prototype.on_input_item_placeholder_focus = function(event) {
  */
 manic.ui.FormCheck.prototype.on_input_item_placeholder_blur = function(event) {
 
-  console.log('manic.ui.FormCheck: on blur?');
+  // console.log('manic.ui.FormCheck: on blur?');
 
   var current_target = $(event.currentTarget);
   var placeholder = current_target.data('placeholder');

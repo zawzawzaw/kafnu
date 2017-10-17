@@ -24,7 +24,7 @@ manic.ui.FileUpload = function(options, element) {
   this.url = this.element.attr('data-url');
 
   if (goog.isDefAndNotNull(this.url) == false || this.url == '') {
-    console.log('manic.ui.FileUpload: ERROR: data-url not set');
+    // console.log('manic.ui.FileUpload: ERROR: data-url not set');
   }
 
     
@@ -73,7 +73,7 @@ manic.ui.FileUpload = function(options, element) {
 
       error = item['error'];
 
-      console.log('error: ' + error);
+      // console.log('error: ' + error);
 
 
       if (goog.isDefAndNotNull(error)) { 
@@ -151,7 +151,7 @@ manic.ui.FileUpload = function(options, element) {
   
   
 
-  console.log('manic.ui.FileUpload: init');
+  // console.log('manic.ui.FileUpload: init');
 };
 goog.inherits(manic.ui.FileUpload, goog.events.EventTarget);
 
@@ -218,7 +218,7 @@ manic.ui.FileUpload.prototype.set_preloader_progress = function(str_param) {
 
 manic.ui.FileUpload.prototype.show_error = function() {
 
-  console.log('show_error');
+  // console.log('show_error');
 
   this.element.parent().addClass('has-error');
   this.element.parent().attr('data-error', 'Doc, docx, or pdf file only');

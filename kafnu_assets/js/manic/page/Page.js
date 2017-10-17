@@ -805,7 +805,7 @@ manic.page.Page.prototype.util_scroll_to = function(str_param){
     //this.scroll_to_target(value);
     
   } else {
-    console.log('Element needs a [data-value] param');
+    // console.log('Element needs a [data-value] param');
   }
 
 };
@@ -847,7 +847,7 @@ manic.page.Page.prototype.scroll_to_after_the_fold = function(){
  */
 manic.page.Page.prototype.on_window_hash_change = function(event) {
 
-  console.log('manic.page.Page: on_window_hash_change');
+  // console.log('manic.page.Page: on_window_hash_change');
 
   this.window_hash = window.location.hash.replace('#', '');
   var str_array = [];
@@ -884,7 +884,7 @@ manic.page.Page.prototype.on_window_hash_change = function(event) {
       this.scroll_to_target(this.window_hash_01, this.window_hash_02, this.window_hash_03);
 
     } else {
-      console.log('manic.page.Page: there is too many slashes in the hash url...');
+      // console.log('manic.page.Page: there is too many slashes in the hash url...');
 
       this.window_hash_01 = "" + str_array[0];
       this.window_hash_02 = "" + str_array[1];
@@ -901,7 +901,7 @@ manic.page.Page.prototype.on_window_hash_change = function(event) {
 
 
 manic.page.Page.prototype.on_scroll_to_no_target = function(){
-  console.log('on_scroll_to_no_target');
+  // console.log('on_scroll_to_no_target');
   // this.scroll_to(0);
 };
 

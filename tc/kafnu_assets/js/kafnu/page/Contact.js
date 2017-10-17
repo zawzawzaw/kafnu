@@ -22,7 +22,7 @@ kafnu.page.Contact = function(options, element) {
   this.options = $.extend(this.options, kafnu.page.Contact.DEFAULT, options);
 
 
-  console.log('kafnu.page.Contact: init');
+  // console.log('kafnu.page.Contact: init');
 };
 goog.inherits(kafnu.page.Contact, kafnu.page.Default);
 
@@ -353,8 +353,10 @@ kafnu.page.Contact.prototype.create_google_map_mobile = function() {
 };
 
 kafnu.page.Contact.prototype.create_contact_form = function() {
-  console.log("validate")
-  $("#contact-form").validate({
+  // console.log("validate")
+  $("#contact-form").submit(function(e) {
+      e.preventDefault();
+  }).validate({
     rules : {
       first_name : "required",
       last_name : "required",
@@ -370,11 +372,16 @@ kafnu.page.Contact.prototype.create_contact_form = function() {
         url: "/php/contact.php",
         data: $(form).serialize(),
         timeout: 3000,
-        success: function() {
-          console.log('here');
+        complete: function() {
           $('#contact-form').find(".message").html("<h5>Your message has been sent successfully.</h5>")
         },
-        error: function() {console.log('failed');}
+        success: function() {
+          // console.log('here');
+          $('#contact-form').find(".message").html("<h5>Your message has been sent successfully.</h5>")
+        },
+        error: function() {
+          // console.log('failed');
+        }
       });
       return false;
     }
@@ -411,7 +418,7 @@ kafnu.page.Contact.prototype.on_tab_icons_click = function(event) {
   var current_tab = icon.attr("href");
   current_tab = current_tab.substring(1);
 
-  console.log(current_tab)
+  // console.log(current_tab)
 
   $('.active-tab').removeClass('active-tab');
   $('.'+current_tab+'-tab').addClass('active-tab');

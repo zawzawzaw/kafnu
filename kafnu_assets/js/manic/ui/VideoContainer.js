@@ -164,7 +164,7 @@ manic.ui.VideoContainer = function(options, element) {
   //   |___|_| \_|___| |_|
   //
 
-  console.log('init');
+  // console.log('init');
 };
 goog.inherits(manic.ui.VideoContainer, goog.events.EventTarget);
 
@@ -407,8 +407,8 @@ manic.ui.VideoContainer.prototype.pause_video = function() {
   try{
     this.player.pause();
   } catch(e){
-    console.log('manic.ui.VideoContainer.prototype.pause_video: ERROR');
-    console.log(e);
+    // console.log('manic.ui.VideoContainer.prototype.pause_video: ERROR');
+    // console.log(e);
   }
   this.is_paused = true;
 
@@ -814,8 +814,8 @@ manic.ui.VideoContainer.prototype.on_window_resize = function(event) {
  */
 manic.ui.VideoContainer.prototype.on_loaded_metadata = function(event) {
 
-  console.log('this.video_element[0].videoWidth: ' + this.video_element[0].videoWidth);
-  console.log('this.video_element[0].videoHeight: ' + this.video_element[0].videoHeight);
+  // console.log('this.video_element[0].videoWidth: ' + this.video_element[0].videoWidth);
+  // console.log('this.video_element[0].videoHeight: ' + this.video_element[0].videoHeight);
 
   this.original_image_width = this.video_element[0].videoWidth;
   this.original_image_height = this.video_element[0].videoHeight;
@@ -897,7 +897,7 @@ manic.ui.VideoContainer.prototype.on_video_play = function(event) {
  * @param  {object} event
  */
 manic.ui.VideoContainer.prototype.on_element_click = function(event) {
-  console.log('on_element_click');
+  // console.log('on_element_click');
   if (this.is_ready == true) { 
     if(manic.IS_ACTUAL_MOBILE == true) {
       // this.player.play();

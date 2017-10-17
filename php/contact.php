@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$form_validation_errors = true;	
 	}
 
-	if($form_validation_errors==false) {
+	if($form_validation_errors==false) {		
 		
 		$mail = new PHPMailer;
 
@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 
-		$mail->setFrom('hongkong@kafnu.com', $name);
-		$mail->addAddress('manicdesign@gmail.com', 'Kafnu Info');     // Add a recipient //kafnuinfo@nextstory.com
+		$mail->setFrom('kafnuinfo@nextstory.com', $name);
+		$mail->addAddress('hongkong@kafnu.com', 'Kafnu Info');     // Add a recipient //kafnuinfo@nextstory.com // hongkong@kafnu.com
 		$mail->addReplyTo($email, $name);
 
 		$mail->isHTML(true);                                  // Set email format to HTML
@@ -68,17 +68,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$mail->AltBody = '';
 
-		if(!$mail->send()) {
-		    echo 'Message could not be sent.';
-		    echo 'Mailer Error: ' . $mail->ErrorInfo;
-		} else {
-		    echo 'Thank you for getting in touch! We will be in contact to assist you.';
-		}
+		
+		$mail->send();
+
+		echo 'Thank you for getting in touch! We will be in contact to assist you.';
+
+		// if(!$mail->send()) {
+		//     echo 'Message could not be sent.';
+		//     echo 'Mailer Error: ' . $mail->ErrorInfo;
+		// } else {
+		//     echo 'Thank you for getting in touch! We will be in contact to assist you.';
+		// }
 
 	}else {
-		foreach ($form_validation_error_msg as $key => $error_msg) {
-			echo $error_msg;
-		}
+		// foreach ($form_validation_error_msg as $key => $error_msg) {
+		// 	echo $error_msg;
+		// }
+		echo 'error sending email';
 	}
 
 }

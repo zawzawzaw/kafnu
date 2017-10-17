@@ -53,7 +53,7 @@ manic.ui.HoverItem = function(options, element) {
   }.bind(this);
 
   this.on_element_mouseleave = function(event) {
-    console.log('on_element_mouseleave');
+    // console.log('on_element_mouseleave');
     this.is_inside = false;
     
     if (this.is_animating == false) {

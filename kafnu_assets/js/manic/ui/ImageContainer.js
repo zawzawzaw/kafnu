@@ -463,7 +463,7 @@ manic.ui.ImageContainer.prototype.update_layout = function() {
   // console.log('target_image: ' + target_image)
   // load new image
   if (this.current_image != target_image){
-    console.log('manic.ui.ImageContainer: load new image: ' + target_image);
+    // console.log('manic.ui.ImageContainer: load new image: ' + target_image);
 
     this.set_image_src(target_image);
 
@@ -692,10 +692,10 @@ manic.ui.ImageContainer.prototype.use_scale_mode_best_fit = function() {
     this.target_x += this.offset_x;
     this.target_y += this.offset_y;
 
-    console.log('this.image_aspect_ratio: ' + this.image_aspect_ratio);
-    console.log(this.image);
-    console.log('this.target_x: ' + this.target_x);
-    console.log('this.target_y: ' + this.target_y);
+    // console.log('this.image_aspect_ratio: ' + this.image_aspect_ratio);
+    // console.log(this.image);
+    // console.log('this.target_x: ' + this.target_x);
+    // console.log('this.target_y: ' + this.target_y);
 
     this.target_x = Math.round(this.target_x);
     this.target_y = Math.round(this.target_y);
@@ -876,11 +876,11 @@ manic.ui.ImageContainer.prototype.on_image_load_complete = function(event) {
 
     if (this.data_original_width != 0) {
       this.original_image_width = this.data_original_width;
-      console.log('this.original_image_width: ' + this.original_image_width);
+      // console.log('this.original_image_width: ' + this.original_image_width);
     }
     if (this.data_original_height != 0) {
       this.original_image_height = this.data_original_height;
-      console.log('this.original_image_height: ' + this.original_image_height);
+      // console.log('this.original_image_height: ' + this.original_image_height);
     }
 
 

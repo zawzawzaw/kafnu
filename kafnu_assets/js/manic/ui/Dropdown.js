@@ -346,8 +346,8 @@ manic.ui.Dropdown.prototype.disable_value = function(str_param){
   var menu_item = this.menu_item_dictionary['' + str_param];
 
 
-  console.log('menu_item: ');
-  console.log(menu_item);
+  // console.log('menu_item: ');
+  // console.log(menu_item);
 
   if(goog.isDefAndNotNull(menu_item)){
     this.goog_select.removeItem(menu_item);

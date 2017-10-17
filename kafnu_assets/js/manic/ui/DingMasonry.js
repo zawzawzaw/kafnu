@@ -42,7 +42,7 @@ manic.ui.DingMasonry = function(options, element) {
   //   |___|_| \_|___| |_|
   //
 
-  console.log('init');
+  // console.log('init');
 };
 goog.inherits(manic.ui.DingMasonry, goog.events.EventTarget);
 
@@ -132,7 +132,7 @@ manic.ui.DingMasonry.prototype.sample_method_calls = function() {
 manic.ui.DingMasonry.prototype.update_layout = function() {
 
   //if(this.element.is(':visible') == true){
-    console.log('DingMasonry: update_layout');
+    // console.log('DingMasonry: update_layout');
 
     
     this.element_width = this.element.width();
@@ -222,7 +222,7 @@ manic.ui.DingMasonry.prototype.update_column_num = function() {
 
   this.column_num = this.column_num <= 1 ? 1 : this.column_num;
 
-  console.log('this.column_num: ' + this.column_num);
+  // console.log('this.column_num: ' + this.column_num);
 };
 
 
@@ -234,13 +234,13 @@ manic.ui.DingMasonry.prototype.update_visible_items = function() {
   var item = null;
   var item_row = 0;
 
-  console.log('this.row_num: ' + this.row_num);
+  // console.log('this.row_num: ' + this.row_num);
 
   for (var i = 0, l=this.item_array.length; i < l; i++) {
     item = this.item_array[i];
     item_row = Math.floor(i / this.column_num);
 
-    console.log('i: ' + i + ', row: ' + item_row);
+    // console.log('i: ' + i + ', row: ' + item_row);
 
     if (item_row < this.row_num) {
       item.show(0);
@@ -462,7 +462,7 @@ manic.ui.DingMasonryItem = function(options, element) {
   //   |___|_| \_|___| |_|
   //
 
-  console.log('init');
+  // console.log('init');
 };
 goog.inherits(manic.ui.DingMasonryItem, goog.events.EventTarget);
 

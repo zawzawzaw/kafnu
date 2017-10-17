@@ -27,7 +27,7 @@ rippledot.component.ClassName = function(options, element) {
   
 
 
-  console.log('rippledot.component.ClassName: init');
+  // console.log('rippledot.component.ClassName: init');
 };
 goog.inherits(rippledot.component.ClassName, goog.events.EventTarget);
 

@@ -50,8 +50,8 @@ manic.ui.ImageContainerPadding = function(options, element) {
   if (goog.isDefAndNotNull(this.element.attr('data-y'))) {
     this.data_y = parseInt( this.element.attr('data-y') );
   } else {
-    console.log('data-y attribute is MISSING!!');
-    console.log(this.element);
+    // console.log('data-y attribute is MISSING!!');
+    // console.log(this.element);
   }
 
 
@@ -66,7 +66,7 @@ manic.ui.ImageContainerPadding = function(options, element) {
   this.get_image_container();
 
 
-  console.log('init');
+  // console.log('init');
 };
 goog.inherits(manic.ui.ImageContainerPadding, goog.events.EventTarget);
 
