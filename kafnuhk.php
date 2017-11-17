@@ -187,7 +187,7 @@ ob_start();
                       <li><a href="https://hongkong.kafnu.com/en/bookings/search?type=435361936" data-price="From HK$70/Hour" target="_blank">Hourly</a></li>
                       <li><a href="https://hongkong.kafnu.com/en/signup?returnUrl=/en/store/signupproducts?productid=435575149" data-price="HK$550/Day" target="_blank">Daily</a></li>
                       <li><a href="https://hongkong.kafnu.com/en/signup/priceplan/60da246c-9686-4342-8cef-6ea4fd12604f?startdate=" data-price="HK$2,500/Month" target="_blank">5-Day Pass</a></li>
-                      <li><a href="https://hongkong.kafnu.com/en/tour" data-price="" target="_blank">Monthly</a></li>
+                      <li><a href="https://hongkong.kafnu.com/en/tour" data-price="HK$6,500/Month" target="_blank">Monthly</a></li>
                     </ul>
                     <!-- <a href="javascript:void(0);" class="open-soon"><span>Open 3 October</span></a> -->
                   </div>
